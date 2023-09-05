@@ -5,9 +5,6 @@ namespace FizzBuzz
 {
 	public class FizzBuzzIterations
     {
-		public FizzBuzzIterations()
-		{
-		}
 
         public static string Iter1(int valeur)
         {
@@ -16,6 +13,11 @@ namespace FizzBuzz
             if (valeur % 5 == 0) result.Append("Buzz");
 
             return result.Length > 0 ? result.ToString() : valeur.ToString();
+        }
+
+        public static string Iter2(int v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

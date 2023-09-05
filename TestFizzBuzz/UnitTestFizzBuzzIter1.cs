@@ -2,7 +2,7 @@
 namespace TestFizzBuzz;
 
 [TestClass]
-public class UnitTestFizzBuzz
+public class UnitTestFizzBuzzIter1
 {
     [TestMethod]
     public void TestMethodIter1Donne3RenvoieFizz()

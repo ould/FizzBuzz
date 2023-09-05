@@ -8,20 +8,32 @@ namespace FizzBuzz
 
         public static string Iter1(int valeur)
         {
-            var result = new StringBuilder();
-            if (valeur % 3 == 0) result.Append("Fizz");
-            if (valeur % 5 == 0) result.Append("Buzz");
+            //var result = new StringBuilder();
+            //if (valeur % 3 == 0) result.Append("Fizz");
+            //if (valeur % 5 == 0) result.Append("Buzz");
 
-            return result.Length > 0 ? result.ToString() : valeur.ToString();
+            //return result.Length > 0 ? result.ToString() : valeur.ToString();
+
+            var result = FizzBuzzGenerator(valeur, 3, 5);
+            return result;
+
         }
 
         public static string Iter2(int valeur)
         {
-            var result = new StringBuilder();
-            if (valeur % 7 == 0) result.Append("Fizz");
-            if (valeur % 11 == 0) result.Append("Buzz");
+            var result = FizzBuzzGenerator(valeur, 7, 11);
+            return result;
+        }
 
-            return result.Length > 0 ? result.ToString() : valeur.ToString();
+
+
+        private static string FizzBuzzGenerator(int input, int nbrFizz, int nbrBuzz)
+        {
+            var result = new StringBuilder();
+            if (input % nbrFizz == 0) result.Append("Fizz");
+            if (input % nbrBuzz == 0) result.Append("Buzz");
+
+            return result.Length > 0 ? result.ToString() : input.ToString();
         }
     }
 }

@@ -7,9 +7,9 @@ namespace FizzBuzz
 		{
 		}
 
-        public string Iter1(int v)
+        public string Iter1(int valeur)
         {
-            throw new NotImplementedException();
+            return "Fizz";
         }
     }
 }

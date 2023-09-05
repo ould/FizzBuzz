@@ -9,7 +9,7 @@ public class UnitTestFizzBuzz
     {
         var FizzBuzzObject = new FizzBuzzIterations();
         string result = FizzBuzzObject.Iter1(3);
-        Assert.Equals(result, "Fizz");
+        Assert.AreEqual(result, "Fizz");
 
     }
 }

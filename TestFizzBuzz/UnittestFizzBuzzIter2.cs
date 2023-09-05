@@ -4,10 +4,18 @@ namespace TestFizzBuzz;
 [TestClass]
 public class UnittestFizzBuzzIter2
 {
+    private FizzBuzzIterations _fizzBuzzObject;
+
+    public UnittestFizzBuzzIter2()
+    {
+        _fizzBuzzObject = new FizzBuzzIterations();
+    }
+
+
     [TestMethod]
     public void TestMethodIter2Donne7RenvoieFizz()
     {
-        string result = FizzBuzzIterations.Iter2(7);
+        string result = _fizzBuzzObject.Iter2(7);
         Assert.AreEqual("Fizz", result);
 
     }
@@ -16,7 +24,7 @@ public class UnittestFizzBuzzIter2
     [TestMethod]
     public void TestMethodIter2Donne14RenvoieFizz()
     {
-        string result = FizzBuzzIterations.Iter2(14);
+        string result = _fizzBuzzObject.Iter2(14);
         Assert.AreEqual( "Fizz", result);
 
     }
@@ -25,7 +33,7 @@ public class UnittestFizzBuzzIter2
     [TestMethod]
     public void TestMethodIter2Donne11RenvoieBuzz()
     {
-        string result = FizzBuzzIterations.Iter2(11);
+        string result = _fizzBuzzObject.Iter2(11);
         Assert.AreEqual( "Buzz", result);
 
     }
@@ -33,7 +41,7 @@ public class UnittestFizzBuzzIter2
     [TestMethod]
     public void TestMethodIter2Donne22RenvoieBuzz()
     {
-        string result = FizzBuzzIterations.Iter2(22);
+        string result = _fizzBuzzObject.Iter2(22);
         Assert.AreEqual( "Buzz", result);
 
     }
@@ -42,7 +50,7 @@ public class UnittestFizzBuzzIter2
     [TestMethod]
     public void TestMethodIter2Donne77RenvoieFizzBuzz()
     {
-        string result = FizzBuzzIterations.Iter2(77);
+        string result = _fizzBuzzObject.Iter2(77);
         Assert.AreEqual( "FizzBuzz", result);
 
     }
@@ -50,7 +58,7 @@ public class UnittestFizzBuzzIter2
     [TestMethod]
     public void TestMethodIter2Donne1Renvoie1()
     {
-        string result = FizzBuzzIterations.Iter2(1);
+        string result = _fizzBuzzObject.Iter2(1);
         Assert.AreEqual( "1", result);
 
     }
@@ -58,7 +66,7 @@ public class UnittestFizzBuzzIter2
     [TestMethod]
     public void TestMethodIter2Donne3Renvoie3()
     {
-        string result = FizzBuzzIterations.Iter2(3);
+        string result = _fizzBuzzObject.Iter2(3);
         Assert.AreEqual( "3", result);
 
     }

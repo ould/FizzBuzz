@@ -5,51 +5,53 @@ namespace FizzBuzz
 {
 	public class FizzBuzzIterations
     {
+        private IDictionary<int, string> _lienInputResult;
 
-        public static string Iter1(int input)
+        public FizzBuzzIterations()
         {
-            var result = FizzBuzzGenerator(input, 3, 5);
-            return result;
+            _lienInputResult = new Dictionary<int, string>();
         }
 
-        public static string Iter2(int input)
+        public string Iter1(int input)
         {
-            var result = FizzBuzzGenerator(input, 7, 11);
-            return result;
+            
+            _lienInputResult.Add(3, "Fizz");
+            _lienInputResult.Add(5, "Buzz");
+
+            return FizzBuzzGameGenerator(input, _lienInputResult);
+
+        }      
+
+        public string Iter2(int input)
+        {    
+            _lienInputResult.Add(7, "Fizz");
+            _lienInputResult.Add(11, "Buzz");
+
+            return FizzBuzzGameGenerator(input, _lienInputResult);
         }
 
 
-        public static string Iter3(int input)
+        public string Iter3(int input)
         {
-            var resultFizzBuzz = FizzBuzzGenerator(input, 13, 17);
-            if (resultFizzBuzz == input.ToString()) resultFizzBuzz = "";
+            _lienInputResult.Add(13, "Fizz");
+            _lienInputResult.Add(17, "Buzz");
+            _lienInputResult.Add(19, "Fuzz");
+            _lienInputResult.Add(23, "Bizz");
 
-            var resultFuzzBizz = FuzzBizzGenerator(input, 19, 23);
-            if (resultFuzzBizz == input.ToString()) resultFuzzBizz = "";
-
-            string finalResult = resultFizzBuzz + resultFuzzBizz;
-
-            return finalResult.Length > 0 ? finalResult : input.ToString();
+            return FizzBuzzGameGenerator(input, _lienInputResult);
         }
 
-        private static string FuzzBizzGenerator(int input, int nbrFuzz, int nbrBizz)
+
+        private string FizzBuzzGameGenerator(int input, IDictionary<int, string> lienInputResult)
         {
             var result = new StringBuilder();
-            if (input % nbrFuzz == 0) result.Append("Fuzz");
-            if (input % nbrBizz == 0) result.Append("Bizz");
+            foreach (var paire in lienInputResult)
+            {
+                if (input % paire.Key == 0) result.Append(paire.Value);
+            }
 
             return result.Length > 0 ? result.ToString() : input.ToString();
         }
-
-        private static string FizzBuzzGenerator(int input, int nbrFizz, int nbrBuzz)
-        {
-            var result = new StringBuilder();
-            if (input % nbrFizz == 0) result.Append("Fizz");
-            if (input % nbrBuzz == 0) result.Append("Buzz");
-
-            return result.Length > 0 ? result.ToString() : input.ToString();
-        }
-
 
     }
 }

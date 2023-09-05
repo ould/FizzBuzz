@@ -18,4 +18,12 @@ public class UnitTestFizzBuzz
         Assert.AreEqual(result, "Fizz");
 
     }
+
+    [TestMethod]
+    public void TestMethodIter1Donne6RenvoieFizz()
+    {
+        string result = _fizzBuzzObject.Iter1(6);
+        Assert.AreEqual(result, "Fizz");
+
+    }
 }

@@ -9,7 +9,8 @@ namespace FizzBuzz
 
         public string Iter1(int valeur)
         {
-            return "Fizz";
+            if (valeur % 3 == 0) return "Fizz";
+            return valeur.ToString();
         }
     }
 }

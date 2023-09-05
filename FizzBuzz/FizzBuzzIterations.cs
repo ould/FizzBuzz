@@ -41,6 +41,10 @@ namespace FizzBuzz
             return FizzBuzzGameGenerator(input, _lienInputResult);
         }
 
+        public string SuperFizzBuzz(int v)
+        {
+            throw new NotImplementedException();
+        }
 
         private string FizzBuzzGameGenerator(int input, IDictionary<int, string> lienInputResult)
         {

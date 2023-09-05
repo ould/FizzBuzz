@@ -15,9 +15,8 @@ namespace FizzBuzz
 
         public string Iter1(int input)
         {
-            
-            _lienInputResult.Add(i => i%3 == 0, "Fizz");
-            _lienInputResult.Add(i => i%5 == 0, "Buzz");
+            _lienInputResult.Add(HelpersFizzBuzz.EstDivisiblePar(3), "Fizz");
+            _lienInputResult.Add(HelpersFizzBuzz.EstDivisiblePar(5), "Buzz");
 
             return SuperFizzBuzzGenerator(input, _lienInputResult);
 
@@ -25,8 +24,8 @@ namespace FizzBuzz
 
         public string Iter2(int input)
         {    
-            _lienInputResult.Add(i => i%7 == 0, "Fizz");
-            _lienInputResult.Add(i => i%11 == 0, "Buzz");
+            _lienInputResult.Add(HelpersFizzBuzz.EstDivisiblePar(7), "Fizz");
+            _lienInputResult.Add(HelpersFizzBuzz.EstDivisiblePar(11), "Buzz");
 
             return SuperFizzBuzzGenerator(input, _lienInputResult);
         }
@@ -34,10 +33,10 @@ namespace FizzBuzz
 
         public string Iter3(int input)
         {
-            _lienInputResult.Add(i=> i%13 ==0, "Fizz");
-            _lienInputResult.Add(i => i % 17 == 0, "Buzz");
-            _lienInputResult.Add(i => i % 19 == 0, "Fuzz");
-            _lienInputResult.Add(i => i % 23 == 0, "Bizz");
+            _lienInputResult.Add(HelpersFizzBuzz.EstDivisiblePar(13), "Fizz");
+            _lienInputResult.Add(HelpersFizzBuzz.EstDivisiblePar(17), "Buzz");
+            _lienInputResult.Add(HelpersFizzBuzz.EstDivisiblePar(19), "Fuzz");
+            _lienInputResult.Add(HelpersFizzBuzz.EstDivisiblePar(23), "Bizz");
 
             return SuperFizzBuzzGenerator(input, _lienInputResult);
         }
@@ -45,9 +44,9 @@ namespace FizzBuzz
         public string SuperFizzBuzz(int input)
         {
             
-            _lienInputResult.Add(i => i % 3 != 0, "Fizz");
-            _lienInputResult.Add(i => (i !=0) && (i % 2 != 0), "Buzz");
-            _lienInputResult.Add(i => Math.Sqrt(input)%1 == 0 , "Fuzz");
+            _lienInputResult.Add(HelpersFizzBuzz.PasDivisiblePar(3), "Fizz");
+            _lienInputResult.Add(HelpersFizzBuzz.EstImpair(), "Buzz");
+            _lienInputResult.Add(HelpersFizzBuzz.EstCarreParfait() , "Fuzz");
 
             var result = SuperFizzBuzzGenerator(input, _lienInputResult);
             return result;

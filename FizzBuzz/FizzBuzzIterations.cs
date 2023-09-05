@@ -41,9 +41,14 @@ namespace FizzBuzz
             return FizzBuzzGameGenerator(input, _lienInputResult);
         }
 
-        public string SuperFizzBuzz(int v)
+        public string SuperFizzBuzz(int input)
         {
-            throw new NotImplementedException();
+            var result = new StringBuilder();
+            if (input % 3 != 0) result.Append("Fizz");
+            if (input != 0 && input % 2 != 0) result.Append("Buzz");
+            if (Math.Sqrt(input) % 1 == 0) result.Append("Fuzz");
+
+            return result.Length > 0 ? result.ToString() : input.ToString();
         }
 
         private string FizzBuzzGameGenerator(int input, IDictionary<int, string> lienInputResult)

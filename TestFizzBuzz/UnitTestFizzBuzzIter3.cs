@@ -77,6 +77,25 @@ namespace TestFizzBuzz
 
         }
 
+        [TestMethod]
+        public void TestMethodIter3Donne5681RenvoieFizzFuzzBizz()
+        {
+            // 13*19*23 = 5681
+            string result = FizzBuzzIterations.Iter3(5681);
+            Assert.AreEqual(result, "FizzFuzzBizz");
+
+        }
+
+
+        [TestMethod]
+        public void TestMethodIter3Donne1Renvoie1()
+        {
+            string result = FizzBuzzIterations.Iter3(1);
+            Assert.AreEqual(result, "1");
+
+        }
+
+
 
 
 

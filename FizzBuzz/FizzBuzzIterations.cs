@@ -18,7 +18,10 @@ namespace FizzBuzz
             return result;
         }
 
-
+        public static string Iter3(int v)
+        {
+            throw new NotImplementedException();
+        }
 
         private static string FizzBuzzGenerator(int input, int nbrFizz, int nbrBuzz)
         {

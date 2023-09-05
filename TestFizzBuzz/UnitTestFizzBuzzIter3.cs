@@ -10,7 +10,7 @@ namespace TestFizzBuzz
         public void TestMethodIter3Donne13RenvoieFizz()
         {
             string result = FizzBuzzIterations.Iter3(13);
-            Assert.AreEqual(result, "Fizz");
+            Assert.AreEqual("Fizz", result);
 
         }
 
@@ -18,7 +18,7 @@ namespace TestFizzBuzz
         public void TestMethodIter3Donne17RenvoieBuzz()
         {
             string result = FizzBuzzIterations.Iter3(17);
-            Assert.AreEqual(result, "Buzz");
+            Assert.AreEqual("Buzz", result);
 
         }
 
@@ -26,7 +26,7 @@ namespace TestFizzBuzz
         public void TestMethodIter3Donne19RenvoieFuzz()
         {
             string result = FizzBuzzIterations.Iter3(19);
-            Assert.AreEqual(result, "Fuzz");
+            Assert.AreEqual("Fuzz", result);
 
         }
 
@@ -34,7 +34,7 @@ namespace TestFizzBuzz
         public void TestMethodIter3Donne23RenvoieBizz()
         {
             string result = FizzBuzzIterations.Iter3(23);
-            Assert.AreEqual(result, "Bizz");
+            Assert.AreEqual("Bizz", result);
 
         }
 
@@ -44,7 +44,7 @@ namespace TestFizzBuzz
         {
             // 17*13 = 221
             string result = FizzBuzzIterations.Iter3(221);
-            Assert.AreEqual(result, "FizzBuzz");
+            Assert.AreEqual("FizzBuzz", result);
 
         }
 
@@ -53,7 +53,7 @@ namespace TestFizzBuzz
         {
             // 13*19 = 247
             string result = FizzBuzzIterations.Iter3(247);
-            Assert.AreEqual(result, "FizzFuzz");
+            Assert.AreEqual("FizzFuzz", result);
 
         }
 
@@ -63,7 +63,7 @@ namespace TestFizzBuzz
         {
             // 17*23 = 391
             string result = FizzBuzzIterations.Iter3(391);
-            Assert.AreEqual(result, "BuzzBizz");
+            Assert.AreEqual("BuzzBizz", result);
 
         }
 
@@ -73,7 +73,7 @@ namespace TestFizzBuzz
         {
             // 19*23 = 437
             string result = FizzBuzzIterations.Iter3(437);
-            Assert.AreEqual(result, "FuzzBizz");
+            Assert.AreEqual("FuzzBizz", result);
 
         }
 
@@ -82,7 +82,7 @@ namespace TestFizzBuzz
         {
             // 13*19*23 = 5681
             string result = FizzBuzzIterations.Iter3(5681);
-            Assert.AreEqual(result, "FizzFuzzBizz");
+            Assert.AreEqual("FizzFuzzBizz", result);
 
         }
 
@@ -91,7 +91,7 @@ namespace TestFizzBuzz
         public void TestMethodIter3Donne1Renvoie1()
         {
             string result = FizzBuzzIterations.Iter3(1);
-            Assert.AreEqual(result, "1");
+            Assert.AreEqual("1", result);
 
         }
 

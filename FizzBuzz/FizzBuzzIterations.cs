@@ -15,9 +15,13 @@ namespace FizzBuzz
             return result.Length > 0 ? result.ToString() : valeur.ToString();
         }
 
-        public static string Iter2(int v)
+        public static string Iter2(int valeur)
         {
-            throw new NotImplementedException();
+            var result = new StringBuilder();
+            if (valeur % 7 == 0) result.Append("Fizz");
+            if (valeur % 11 == 0) result.Append("Buzz");
+
+            return result.Length > 0 ? result.ToString() : valeur.ToString();
         }
     }
 }

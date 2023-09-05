@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+
 namespace FizzBuzz
 {
 	public class FizzBuzzIterations
@@ -7,12 +9,13 @@ namespace FizzBuzz
 		{
 		}
 
-        public string Iter1(int valeur)
+        public static string Iter1(int valeur)
         {
-            if (valeur % 3 == 0) return "Fizz";
-            if (valeur % 5 == 0) return "Buzz";
+            var result = new StringBuilder();
+            if (valeur % 3 == 0) result.Append("Fizz");
+            if (valeur % 5 == 0) result.Append("Buzz");
 
-            return valeur.ToString();
+            return result.Length > 0 ? result.ToString() : valeur.ToString();
         }
     }
 }

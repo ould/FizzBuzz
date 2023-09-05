@@ -4,17 +4,10 @@ namespace TestFizzBuzz;
 [TestClass]
 public class UnitTestFizzBuzz
 {
-    private FizzBuzzIterations _fizzBuzzObject;
-
-    public UnitTestFizzBuzz()
-    {
-        _fizzBuzzObject = new FizzBuzzIterations();
-    }
-
     [TestMethod]
     public void TestMethodIter1Donne3RenvoieFizz()
     {
-        string result = _fizzBuzzObject.Iter1(3);
+        string result = FizzBuzzIterations.Iter1(3);
         Assert.AreEqual(result, "Fizz");
 
     }
@@ -22,7 +15,7 @@ public class UnitTestFizzBuzz
     [TestMethod]
     public void TestMethodIter1Donne6RenvoieFizz()
     {
-        string result = _fizzBuzzObject.Iter1(6);
+        string result = FizzBuzzIterations.Iter1(6);
         Assert.AreEqual(result, "Fizz");
 
     }
@@ -31,7 +24,7 @@ public class UnitTestFizzBuzz
     [TestMethod]
     public void TestMethodIter1Donne5RenvoieBuzz()
     {
-        string result = _fizzBuzzObject.Iter1(5);
+        string result = FizzBuzzIterations.Iter1(5);
         Assert.AreEqual(result, "Buzz");
 
     }
@@ -40,7 +33,7 @@ public class UnitTestFizzBuzz
     [TestMethod]
     public void TestMethodIter1Donne10RenvoieBuzz()
     {
-        string result = _fizzBuzzObject.Iter1(10);
+        string result = FizzBuzzIterations.Iter1(10);
         Assert.AreEqual(result, "Buzz");
 
     }
@@ -48,7 +41,7 @@ public class UnitTestFizzBuzz
     [TestMethod]
     public void TestMethodIter1Donne15RenvoieFizzBuzz()
     {
-        string result = _fizzBuzzObject.Iter1(15);
+        string result = FizzBuzzIterations.Iter1(15);
         Assert.AreEqual(result, "FizzBuzz");
 
     }
